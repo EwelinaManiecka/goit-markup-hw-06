@@ -12,6 +12,12 @@ body {
 *::after {
     box-sizing: border-box;
 }
+:root{
+    --main-color: rgba(33, 150, 243, 1);
+    --dark-shadow: rgba(47, 48, 58, 0.8);
+    --bring-shadow: rgba(117, 117, 117, 1);
+    --button-text-color: rgba(255, 255, 255, 1);
+}
 
 h1,
 h2,
@@ -81,14 +87,14 @@ header {
 
 .navigation-item:hover
 .navigation-icon {
-    fill: #2196F3;
+    fill: var(--main-color);
     cursor: pointer;
     transition: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .data-contact {
-    color: rgba(117, 117, 117, 1);
+    color: var(--bring-shadow);
     display: flex;
     align-items: center;
 }
@@ -96,7 +102,7 @@ header {
 .navigation-icon {
     height: 16px;
     width: 18px;
-    fill: #757575;
+    fill: var(--bring-shadow);
     margin-right: 10px;
 }
 
@@ -108,7 +114,7 @@ nav {
 
 .all_name span {
     font-family: 'Raleway';
-    color: #2196F3;
+    color: var(--main-color);
     line-height: 1.19;
 }
 
@@ -132,7 +138,7 @@ a {
 }
 
 a:hover {
-    color: #2196F3;
+    color: var(--main-color);
     transition: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -142,7 +148,7 @@ a:hover {
     content: "";
     display: block;
     width: 58px;
-    border-top: 4px solid rgba(33, 150, 243, 1);
+    border-top: 4px solid var(--main-color);
     position: relative;
     top: 28px;
 }
@@ -161,7 +167,7 @@ h1 {
 }
 
 .heading {
-    background-color: rgba(47, 48, 58, 1);
+    background-color: var(--dark-shadow);
     margin: 50px auto 90px;
     max-width: 1600px;
     text-align: center;
@@ -177,8 +183,8 @@ h1 {
     font-size: 16px;
     font-weight: 500;
     line-height: 1.86;
-    color: white;
-    background-color: rgba(33, 150, 243, 1);
+    color: var(--button-text-color);
+    background-color: var(--main-color);
     border-radius: 4px;
     border: 0px;
     padding: 10px 42px;
@@ -206,8 +212,8 @@ h1 {
 }
 
 .button:hover {
-    background-color: rgba(33, 150, 243, 1);
-    color: rgba(255, 255, 255, 1);
+    background-color: var(--main-color);
+    color: var(--button-text-color);
     cursor: pointer;
     transition: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -293,7 +299,7 @@ p {
     font-size: 16px;
     font-weight: 500;
     line-height: 1.17;
-    background-color: whi;
+    background-color: white;
     text-align: center;
     padding-top: 30px;
 }
@@ -302,7 +308,7 @@ p {
 
 .description {
     line-height: 1.17;
-    color: rgba(117, 117, 117, 1);
+    color: var(--bring-shadow);
     width: 270px;
     justify-content: center;
 }
@@ -316,7 +322,7 @@ p {
 .profession {
     font-size: 16px;
     line-height: 1.17;
-    color: rgba(117, 117, 117, 1);
+    color: var(--bring-shadow);
     text-align: center;
 }
 
@@ -368,43 +374,18 @@ transform: translateY(-100%);
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(33, 150, 243, 0.9);
+    background-color: var(--main-color);
 
     transform: translateY(100%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .overlay > p {
-color: #FFFFFF;
-padding: 10px;
-font-size: 18px;
-line-height: 1.56;
+    color: #FFFFFF;
+    padding: 10px;
+    font-size: 18px;
+    line-height: 1.56;
 }
-
-/* nakładki niebieskie (overlay blue) 
-.overlay {
-    top: 0;
-    left: 0;
-    width: 370px;
-    height: 294px;
-    background-color: rgba(33, 150, 243, 0.9);
-
-    transform: translateY(-100%);
-    transition: transform 250ms ease;
-}
-
-.overlay code{
-    display: inline-block;
-    padding: 2px 4px;
-    border-radius: 4px;
-    background-color: #2196F3;
-}
-
-.project:hover .overlay{
-    transform: translarey(0);
-}
-
-*/
 
 /*stylowanie zdjęć w naszym zespole 
 - trójwymiar i szerokość*/
@@ -427,8 +408,8 @@ line-height: 1.56;
 /*napisy do zdjęć z sekcji czym się zajmujemy*/
 .occupation {
     text-transform: uppercase;
-    background-color: rgba(47, 48, 58, 0.8);
-    color: #FFFFFF;
+    background-color: var(--dark-shadow);
+    color: var(--button-text-color);
     width: 370px;
     height: 70px;
     display: flex;
@@ -460,7 +441,7 @@ line-height: 1.56;
     height: 44px;
     border-radius: 50%;
     margin-bottom: 30px;
-    fill: #AFB1B8;
+    fill: rgba(175, 177, 184, 1);
 }
 
 .social-icons {
@@ -474,7 +455,7 @@ line-height: 1.56;
 .social-icons-item:hover,
 .social-icons-item:focus {
     fill: #ffffff;
-    background-color: #2196F3;
+    background-color: var(--main-color);
     transition: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -482,7 +463,7 @@ line-height: 1.56;
 /*sekcja o klientach*/
 
 .icon-client {
-    color: #AFB1B8;
+    color: var(--bring-shadow);
 }
 
 .type_clients {
@@ -494,14 +475,14 @@ line-height: 1.56;
     display: flex;
     justify-content: center;
     align-items: center;
-    fill: #AFB1B8
+    fill: rgba(175, 177, 184, 1);
 }
 
 /* Zmiana koloru - najechanie myszą*/
 
 .type_clients:hover {
-    fill: #2196F3;
-    border: 1px solid #2196F3;
+    fill: var(--main-color);
+    border: 1px solid var(--main-color);
     cursor: pointer;
     transition: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -528,7 +509,7 @@ address {
 /* Stylowanie nr telefonu i adresu mailowego w footerze*/
 
 .contact_footer {
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--bring-shadow);
     font-size: 14px;
     line-height: 1.71;
     font-style: normal;
@@ -536,7 +517,7 @@ address {
 
 .second_name span {
     font-family: 'Raleway';
-    color: #2196F3;
+    color: var(--main-color);
     line-height: 1.19;
 }
 
@@ -583,10 +564,43 @@ footer>.container {
 .social-icons-item-footer:hover,
 .social-icons-item-footer:focus {
     fill: #ffffff;
-    background-color: #2196F3;
+    background-color: var(--main-color);
     transition: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+/*Newsletter*/
+.add-newsletter>h3 {
+    color: rgba(255, 255, 255, 1);
+    text-transform: uppercase;
+}
+
+.add-newsletter{
+    margin-left: 70px;
+}
+
+.newsletter-contact {
+    width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.submission_newsletter {
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    align-items: center;
+}
+
+.icon-newsletter{
+    width: 24px;
+    height: 24px;
+}
+
+/*okno modalne*/
 
 .backdrop {
     position: fixed;
@@ -611,6 +625,102 @@ footer>.container {
     background-color: #FFFFFF;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transform: translate(-50%, -50%);
+    border-radius: 4px;
+}
+
+.modal-form>h2 {
+    font-size: 20px;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.modal-form {
+    margin: 40px;
+}
+
+.modal-title {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 4px;
+    padding-bottom: 10px;
+    color: var(--bring-shadow);
+}
+
+.modal-form-policy-text::before {
+    display: inline-block;
+    content: "";
+    width: 16px;
+    height: 16px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+}
+
+form > label {
+    display: inline;
+}
+
+input:focus{
+        border: 1px solid;
+        cursor: text;
+        transition: 250ms;
+        transition: var(--main-color);
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+input {
+    border: 1px solid var(--bring-shadow);
+    padding: 8px;
+}
+
+.modal-icon-contact {
+    width: 13px;
+    height: 13px;
+}
+
+.modal-form-policy:checked + .modal-form-policy-text::before {
+    background-image: url(./images/vector-policy.svg);
+    border: 1px var(--main-color);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: var(--main-color);
+}
+
+.submission {
+    width: 200px;
+    height: 50px;
+    background-color: var(--main-color);
+    color: var(--button-text-color);
+    border-radius: 4px;
+    border: var(--main-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    font-size: 16px;
+    font-weight: 700;
+    display: block;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+
+.modal-regulation-link {
+    color: var(--main-color);
+    font-weight: 400;
+    text-decoration: underline;
 }
 
 .close-btn {
