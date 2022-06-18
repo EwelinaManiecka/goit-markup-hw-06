@@ -426,6 +426,8 @@ transform: translateY(-100%);
     align-items: center;
     justify-content: space-around;
     padding: 0;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .social-list {
@@ -577,6 +579,7 @@ footer>.container {
 
 .add-newsletter{
     margin-left: 70px;
+    padding-top: 0;
 }
 
 .newsletter-contact {
@@ -670,16 +673,18 @@ label {
     margin-bottom: 8px;
 }
 
+label:focus-within{
+    fill: var(--main-color);
+}
+
 form > label {
     display: inline;
 }
 
-label:active{
-    border-color: var(--main-color);
-}
-
 input:focus-within{
     cursor: text;
+    outline-color: var(--main-color);
+    color: var(--main-color);
 }
 
 input {
