@@ -667,25 +667,44 @@ form > label {
 }
 
 input:focus{
-        border: 1px solid;
-        cursor: text;
-        transition: 250ms;
-        transition: var(--main-color);
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: text;
+    transition: 250ms;
+    transition: var(--main-color);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 input {
     border: 1px solid var(--bring-shadow);
     padding: 8px;
+    border-radius: 4px;
 }
 
-.modal-icon-contact {
+.modal-icon-contact-person {
     width: 13px;
     height: 13px;
+    position: fixed;
+    left: 50px;
+    top: 145px;
+}
+
+.modal-icon-contact-phone {
+    width: 13px;
+    height: 13px;
+    position: fixed;
+    left: 50px;
+    top: 217px;
+}
+
+.modal-icon-contact-mail {
+    width: 13px;
+    height: 13px;
+    position: fixed;
+    left: 50px;
+    top: 290px;
 }
 
 .modal-form-policy:checked + .modal-form-policy-text::before {
-    background-image: url(./images/vector-policy.svg);
+    background-image: url(../images/vector-policy.svg#icon-Vector);
     border: 1px var(--main-color);
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     background-color: var(--main-color);
@@ -703,7 +722,7 @@ input {
     font-weight: 700;
     display: block;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .visually-hidden {
