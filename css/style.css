@@ -736,6 +736,9 @@ textarea {
     resize: none;
 }
 
+textarea:focus-within{
+    outline-color: var(--main-color);
+}
 .modal-form-policy:checked + .modal-form-policy-text::before {
     background-image: url(../images/vector-policy.svg#icon-Vector);
     border: 1px var(--main-color);
