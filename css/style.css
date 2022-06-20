@@ -575,6 +575,7 @@ footer>.container {
 .add-newsletter>h3 {
     color: rgba(255, 255, 255, 1);
     text-transform: uppercase;
+    padding-bottom: 30px;
 }
 
 .add-newsletter{
@@ -588,7 +589,7 @@ footer>.container {
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
     display: flex;
-    align-items: center;
+    align-items: center
 }
 
 .mail > input{
@@ -620,6 +621,7 @@ footer>.container {
 .newsletter-btn {
     position: absolute;
     right: 580px;
+    top: 2935px;
 }
 
 /*okno modalne*/
